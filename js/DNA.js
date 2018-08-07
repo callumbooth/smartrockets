@@ -29,4 +29,13 @@ class DNA {
         // Gives DNA object an array
         return new DNA(newgenes);
     }
+
+    mutation() {
+        for (var i = 0; i < this.genes.length; i++) {
+            if (random(1) < 0.01) {
+                this.genes[i] = p5.Vector.random2D();
+                this.genes[i].setMag(0.2);
+            }
+        }
+    }
 }
